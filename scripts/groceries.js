@@ -173,7 +173,8 @@ var categories = {
 function addProductToCategory(prods, category) {
 	//if product.vegetarian is true, add to vegetarian category
 	category = categories;
-	
+	var prods = document.getElementById("products")
+	var category = document.getElementById("productCategory")
 	for (let i=0; i<prods.length; i+=1){
 		for(let j = 0; j<category.length; j+=1){
 			if(prods[i].vegetarian == true){
