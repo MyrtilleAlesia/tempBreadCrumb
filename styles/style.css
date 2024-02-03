@@ -1,0 +1,120 @@
+/* Grocery Shopping Styles */
+
+/* Container for Tabs */
+.tab {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  max-width: 40%; /* Adjust max-width as needed */
+  width: 100%;
+  margin: 0 auto; /* Center the container */
+}
+
+/* Tab Button Styles */
+.tab button {
+  background-color: #4CAF50;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px 20px;
+  transition: background-color 0.3s;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+}
+
+/* Hover Effect on Tab Buttons */
+.tab button:hover {
+  background-color: #45a049;
+}
+
+/* Active Tab Button Styles */
+.tab button.active {
+  background-color: #45a049;
+}
+
+/* Tab Content Styles */
+.tabcontent {
+  display: none;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  justify-content: center;
+  max-width: 30%;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin: auto;
+}
+
+/* Emoji Style for Tab Content */
+.tabcontent::before {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 10px;
+  color: #4CAF50;
+}
+
+/* Add to Cart Button Styles */
+#addCart {
+  padding: 10px 20px;
+  border: 2px solid #4CAF50;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover Effect on Add to Cart Button */
+#addCart:hover {
+  background-color: #45a049;
+}
+
+/* Image Styles */
+img {
+  width: 200px;
+}
+
+
+ul.breadcrumb {
+  padding: 10px 10px;
+  background-color: #ffffff;
+
+}
+
+ul.breadcrumb li {
+  display: inline;
+  color: rgb(13, 71, 177);
+  font-size: 10px;
+}
+
+ul.breadcrumb li+li::before {
+  padding: 10px;
+  color: rgb(13, 71, 105);
+  content: "/\00a0";
+}
+
+
+ul.breadcrumb li:hover {
+  color: #040404;
+  text-decoration: underline;
+}
+
+.Category button{
+  background-color: #4CAF50;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px 20px;
+  transition: background-color 0.3s;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+}

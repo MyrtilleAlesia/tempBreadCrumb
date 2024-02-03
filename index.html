@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+</div>
+
+
+<!-- Product categories-->
+
+<!-- <div class="productCategory"> -->
+  <!-- code for products added in groceries.js -->
+  <!-- <ul class="breadcrumb">
+    <li><a href="vegetarian.html">Vegetarian</a></li>
+    <li><a href="glutenFree.html">GlutenFree</a></li>
+    <li><a href="organic.html">Organic</a></li>
+  </ul>
+</div> -->
+
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h3>Client Information</h3>
+  <div class="priceSlider">
+    <p>Select a Price Range</p>
+    <input type="range" min="1" max="20" value="10" step="0.10" id="pSlider" oninput="updateSlider()"> $ <span id="sortedPrice"></span>
+  </div>
+  <p>Select any dietary needs, then click Register Choices.</p>
+	Choose a Category:
+	<div id="dietSelect" name="dietSelect">
+    <input type="checkbox" id="Vegetarian" name="Vegetarian">
+    <label for="Vegetarian">Vegetarian</label><br>
+    <input type="checkbox" id="GlutenFree" name="GlutenFree">
+    <label for="GlutenFree">GlutenFree</label><br>
+    <input type="checkbox" id="Organic" name="Organic">
+    <label for="Organic">Organic</label><br>
+    <button id="dietButton" type="button" class="block" onclick="populateListProductChoices('dietSelect', 'displayProduct')">
+      Register Choices
+    </button>
+  </div>
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>Your targeted products</h3>
+  <p>We preselected products based on your restrictions.</p>
+	 Choose items to buy, then add the products to the cart:
+	 <div id="displayProduct"></div>
+	 <!-- <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Add selected items to cart.
+	</button> -->
+  <button id="Category" type="button" class="block" onclick="addProductToCategory()">
+    Shop products by category
+  </button>
+
+  <div class="productCategory">
+    <ul class="breadcrumb">
+      <li><a href="vegetarian.html">Vegetarian</a></li>
+      <li><a href="glutenFree.html">GlutenFree</a></li>
+      <li><a href="organic.html">Organic</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Cart</h3>
+  <p>Here is your cart.</p>
+  <div id="displayCart"></div>
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+
+<p>Website designed by Shacha P., Felix A., Myrtille M.</p>
+</body>
+</html>
